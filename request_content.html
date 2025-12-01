@@ -1,0 +1,175 @@
+﻿
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="h6F5nT2gQEoyeuGWmOl6Yp515rT84HhsolfGol4z">
+
+    <title>Gestion de langue</title>
+
+    <script type="module" src="http://[::1]:5173/@vite/client"></script><link rel="stylesheet" href="http://[::1]:5173/resources/css/app.css" /><script type="module" src="http://[::1]:5173/resources/js/app.js"></script></head>
+
+<body class="font-sans antialiased bg-[var(--bg)] text-[var(--text-dark)]">
+
+<div class="flex min-h-screen">
+
+    
+    <div class="w-64 bg-slate-900 text-white flex flex-col min-h-screen shadow-xl border-r border-slate-800">
+
+    
+    <div class="px-6 py-6 text-2xl font-bold flex items-center gap-3 border-b border-slate-800">
+        <span class="text-yellow-400">🎓</span> 
+        PRIMA ACADEMIE
+    </div>
+
+    
+    <nav class="flex-1 px-4 py-6 space-y-1">
+
+        
+        <a href="http://127.0.0.1:8000/dashboard"
+           class="nav-link-pro ">
+            <span class="icon">📊</span> Dashboard
+        </a>
+
+        
+        <a href="http://127.0.0.1:8000/etudiants"
+           class="nav-link-pro ">
+            <span class="icon">👨‍🎓</span> Étudiants
+        </a>
+
+        
+        <a href="http://127.0.0.1:8000/inscriptions"
+           class="nav-link-pro ">
+            <span class="icon">📝</span> Inscriptions
+        </a>
+
+        
+        <a href="http://127.0.0.1:8000/paiements"
+           class="nav-link-pro ">
+            <span class="icon">💳</span> Paiements
+        </a>
+
+        
+        <a href="http://127.0.0.1:8000/besoins"
+           class="nav-link-pro ">
+            <span class="icon">📘</span> Besoins
+        </a>
+
+    </nav>
+
+    
+    <form method="POST" action="http://127.0.0.1:8000/logout" class="mt-auto">
+        <input type="hidden" name="_token" value="h6F5nT2gQEoyeuGWmOl6Yp515rT84HhsolfGol4z" autocomplete="off">        <button type="submit" class="logout-pro">
+            <span class="icon">🚪</span> Déconnexion
+        </button>
+    </form>
+
+</div>
+
+
+
+<style>
+    .nav-link-pro {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 12px 16px;
+        border-radius: 10px;
+        color: #cbd5e1;
+        font-weight: 500;
+        transition: all 0.25s ease-in-out;
+    }
+
+    .nav-link-pro:hover {
+        background: rgba(148, 163, 184, 0.15);
+        transform: translateX(4px);
+        color: white;
+    }
+
+    .active-pro {
+        background: linear-gradient(90deg, #6366f1, #8b5cf6);
+        color: white;
+        font-weight: 600;
+        transform: translateX(2px);
+        box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
+    }
+
+    .icon {
+        font-size: 1.2rem;
+    }
+
+    .logout-pro {
+        width: 100%;
+        text-align: left;
+        padding: 14px 18px;
+        background: #0f172a;
+        color: #e2e8f0;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        transition: all .25s ease-in-out;
+    }
+
+    .logout-pro:hover {
+        background: #dc2626;
+        color: white;
+    }
+</style>
+
+    
+    <main class="flex-1 p-10 overflow-y-auto fade-in">
+        <div class="flex justify-center items-center py-16">
+
+    <div class="card-dark p-8 w-full max-w-md animate-fadeIn">
+
+        <h2 class="text-3xl font-bold mb-6 text-center text-white">
+            🔐 Connexion
+        </h2>
+
+        
+        <form method="POST" action="http://127.0.0.1:8000/login">
+            <input type="hidden" name="_token" value="h6F5nT2gQEoyeuGWmOl6Yp515rT84HhsolfGol4z" autocomplete="off">
+            
+            <div class="form-group">
+                <label class="form-label text-white">Adresse email</label>
+                <input type="email" name="email" class="form-control" required autofocus>
+            </div>
+
+            
+            <div class="form-group">
+                <label class="form-label text-white">Mot de passe</label>
+                <input type="password" name="password" class="form-control" required>
+            </div>
+
+            
+            <div class="flex items-center mb-4 gap-2">
+                <input type="checkbox" name="remember" class="rounded">
+                <span class="text-sm text-gray-300">Se souvenir de moi</span>
+            </div>
+
+            
+            <button class="btn-primary w-full">
+                Se connecter
+            </button>
+        </form>
+
+        <p class="text-center text-gray-300 mt-6 text-sm">
+            Pas de compte ?
+            <a href="http://127.0.0.1:8000/register" class="text-blue-400 hover:text-blue-300">
+                Créer un compte
+            </a>
+        </p>
+
+    </div>
+
+</div>
+    </main>
+
+</div>
+
+</body>
+</html>
+
